@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Tubi application Andriod Tests">
+
+	<listeners>
+		<listener class-name="com.tubi.listeners.TestListener"/>
+		<listener class-name="com.tubi.listeners.ExtentReportListener"/>
+	</listeners>
+	
+	<test name="Tubi Appium testcases">
+		<parameter name="deviceName" value="Pixel 2"/>
+		<parameter name="udId" value="HT7AT1A03854"/>
+		<parameter name="platformVersion" value="11.0"/>
+		<parameter name="appiumServerUrl" value="http://127.0.0.1:4723/"/>
+		<classes>
+			<class name="com.tubi.tests.MoviesPageTests"></class>
+		</classes>
+	</test>
+
+</suite>
