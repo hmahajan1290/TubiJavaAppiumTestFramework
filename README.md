@@ -39,3 +39,7 @@ platformVersion ----> Platform version of the testing device
 appiumServerUrl ----> Appium Server url where the Appium server is running
 
 ### Please Run this framework as testNG Suite as the above parameters are required to run the test.
+
+After running the test, extent report with name 'TubiAndroidTestsExtentReport.html' will be generated in test-output folder.
+
+Logs will be generated in 'logs' folder with name 'AppiumLogs.log'
