@@ -1,3 +1,4 @@
+#### Working video demo of the framework located in root directory with name 'TubiTestWorkingDemo.mov'
 # Repository Info
 
 This repository has test automation framework for 'Tubi' App for an android device. It is designed using Java TestNG framework with Appium. Page object Model (POM) design pattern is followed.
