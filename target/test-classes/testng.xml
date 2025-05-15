@@ -7,9 +7,10 @@
 	</listeners>
 	
 	<test name="Tubi Appium testcases">
-		<parameter name="deviceName" value="Pixel 2"/>
-		<parameter name="udId" value="HT7AT1A03854"/>
-		<parameter name="platformVersion" value="11.0"/>
+		<parameter name="deviceName" value="Pixel 6"/>
+		<!-- <parameter name="udId" value="HT7AT1A03854"/> -->
+		<parameter name="udId" value="1C111FDF6005XJ"/>
+		<parameter name="platformVersion" value="15.0"/>
 		<parameter name="appiumServerUrl" value="http://127.0.0.1:4723/"/>
 		<classes>
 			<class name="com.tubi.tests.MoviesPageTests"></class>

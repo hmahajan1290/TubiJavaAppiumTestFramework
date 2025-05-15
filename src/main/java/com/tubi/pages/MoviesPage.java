@@ -12,7 +12,7 @@ public class MoviesPage extends BasePage{
 	}
 
 	//Locators
-	private By category_FamilyMovies = By.xpath("//android.widget.TextView[@resource-id='com.tubitv:id/container_name' and @text='Family Movies']");
+	private By category_FamilyMovies = By.xpath("//android.widget.TextView[@text='Family Movies']");
 	
 	//Page Action methods
 	public FamilyMoviesPage clickFamilyMovies()

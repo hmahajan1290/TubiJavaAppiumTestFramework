@@ -26,6 +26,7 @@ public class BasePage extends Page{
 	public WebElement getElement(By locator) 
 	{
 		WebElement element = null;
+		
 		try
 		{
 			waitForElementPresent(locator);
@@ -76,21 +77,24 @@ public class BasePage extends Page{
 	
 	public void scrollToCategory(String category)
 	{
-		driver.findElement(AppiumBy.androidUIAutomator(
-	            "new UiScrollable(new UiSelector().scrollable(true))" +
-	            ".scrollIntoView(new UiSelector().text(\"" + category + "\"));"));
+		driver.findElement((AppiumBy.androidUIAutomator(
+			"new UiScrollable(new UiSelector().resourceId(\"com.tubitv:id/fragment_home_list_category_recycler\"))"
+			+ ".scrollIntoView(new UiSelector().scrollable(true).resourceId(\"com.tubitv:id/container_name\"))"
+			+ ".scrollIntoView(new UiSelector().textMatches(\"" + category + "\").instance(0))")));
+		
 		logger.info("Scrolling to '" + category + "'...");
 	}
 	
 	public void scrollToResource(String resource)
 	{
-		driver.findElement(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
-                ".scrollIntoView(new UiSelector().resourceId(\"" + resource +"\").instance(0))"));
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
+				".scrollIntoView(new UiSelector().resourceId(\"" + resource +"\").instance(0))"));
 	}
 	
 	public boolean isElementPresent(By locator)
 	{
 		WebDriverWait elementWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
 		try
 		{
 			elementWait.until(ExpectedConditions.presenceOfElementLocated(locator));
